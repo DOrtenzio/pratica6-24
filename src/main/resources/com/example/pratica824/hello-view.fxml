@@ -1,16 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.pratica824.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="16.0" layoutY="14.0" prefHeight="83.0" prefWidth="720.0" style="-fx-background-color: #95758A; -fx-background-radius: 24;" />
+      <AnchorPane layoutX="16.0" layoutY="118.0" prefHeight="414.0" prefWidth="249.0" style="-fx-background-color: #DECCCC; -fx-background-radius: 32;">
+         <children>
+            <Button layoutX="19.0" layoutY="25.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Aggiungi" textFill="WHITE">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Button>
+             <Button layoutX="19.0" layoutY="87.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Tutti i pacchetti" textFill="WHITE">
+                 <font>
+                     <Font name="Consolas" size="14.0" />
+                 </font>
+             </Button>
+             <Button layoutX="19.0" layoutY="149.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Costo medio pacchetti" textFill="WHITE">
+                 <font>
+                     <Font name="Consolas" size="14.0" />
+                 </font>
+             </Button>
+             <Button layoutX="19.0" layoutY="211.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Pacchetto Cheap e Luxury" textFill="WHITE">
+                 <font>
+                     <Font name="Consolas" size="14.0" />
+                 </font>
+             </Button>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+         </children>
+      </AnchorPane>
+       <AnchorPane layoutX="289.0" layoutY="117.0" prefHeight="414.0" prefWidth="447.0" style="-fx-background-color: #DECCCC; -fx-background-radius: 36;" />
+   </children>
+</AnchorPane>
