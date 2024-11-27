@@ -26,7 +26,7 @@ public class AgenziaViaggi {
     //to string e equals
     @Override
     public String toString() {
-        String s="ELENCO VIAGGI:\n";
+        String s="ELENCO PACCHETTI VIAGGIO:\n";
         for (int i=0;i<this.inseriti;i++){
             s=s+viaggios[i].toString()+", costo: "+viaggios[i].getCosto()+" \n";
         }
@@ -47,6 +47,15 @@ public class AgenziaViaggi {
     }
 
     //Metodi
+    public boolean inserisci(Viaggio viaggio){
+        if (this.inseriti== viaggios.length)
+            return false;
+        else {
+            viaggios[this.inseriti] = viaggio;
+            this.inseriti++;
+            return true;
+        }
+    }
     public double getCostoMedio(){
         double costo=0.0;
         for (int i=0;i<this.inseriti;i++){
