@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
@@ -15,8 +14,38 @@ public class HelloController {
     private VBox rootBase;
     @FXML
     private AnchorPane root;
+    @FXML
+    private Button b1,b2,b3,b4;
 
     private AgenziaViaggi agenziaViaggi=new AgenziaViaggi();
+
+    @FXML
+    public void initialize() {
+        b1.setOnMouseMoved(event -> {
+            b1.setStyle("-fx-background-color: #95758A; -fx-background-radius: 36;");
+        });
+        b2.setOnMouseMoved(event -> {
+            b2.setStyle("-fx-background-color: #95758A; -fx-background-radius: 36;");
+        });
+        b3.setOnMouseMoved(event -> {
+            b3.setStyle("-fx-background-color: #95758A; -fx-background-radius: 36;");
+        });
+        b4.setOnMouseMoved(event -> {
+            b4.setStyle("-fx-background-color: #95758A; -fx-background-radius: 36;");
+        });
+        b1.setOnMouseExited(event -> {
+            b1.setStyle("-fx-background-color: #AF97A7; -fx-background-radius: 36;");
+        });
+        b2.setOnMouseExited(event -> {
+            b2.setStyle("-fx-background-color: #AF97A7; -fx-background-radius: 36;");
+        });
+        b3.setOnMouseExited(event -> {
+            b3.setStyle("-fx-background-color: #AF97A7; -fx-background-radius: 36;");
+        });
+        b4.setOnMouseExited(event -> {
+            b4.setStyle("-fx-background-color: #AF97A7; -fx-background-radius: 36;");
+        });
+    }
 
     @FXML
     protected void aggiungi() {
@@ -237,5 +266,10 @@ public class HelloController {
         PauseTransition pausa = new PauseTransition(Duration.seconds(3));
         pausa.setOnFinished(event -> root.getChildren().remove(messaggioConferma));
         pausa.play();
+    }
+
+    @FXML
+    public void cambiaColore( ){
+
     }
 }
