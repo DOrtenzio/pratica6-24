@@ -102,10 +102,14 @@ public class HelloController {
                 rootBase.getChildren().addAll(l1,t1,l2,t2,l3,t3,b2);
                 b2.setOnMouseClicked( e1 -> {
                     rootBase.getChildren().clear();
-                    if(agenziaViaggi.inserisci(new Viaggio(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()))))
-                        mostraMessaggioConferma();
-                    else
+                    try{
+                        if(agenziaViaggi.inserisci(new Viaggio(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()))))
+                            mostraMessaggioConferma();
+                        else
+                            mostraMessaggioErrore();
+                    }catch (Exception exception){
                         mostraMessaggioErrore();
+                    }
                 });
             } else if (r2.isSelected()) {
                 b2.setDisable(true);
@@ -128,16 +132,20 @@ public class HelloController {
 
                 b2.setOnMouseClicked( e2 -> {
                     rootBase.getChildren().clear();
-                    if (r10.isSelected()){
-                        if(agenziaViaggi.inserisci(new ViaggioVolo(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true)))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
-                    }else{
-                        if(agenziaViaggi.inserisci(new ViaggioVolo(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false)))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
+                    try{
+                        if (r10.isSelected()){
+                            if(agenziaViaggi.inserisci(new ViaggioVolo(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true)))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }else{
+                            if(agenziaViaggi.inserisci(new ViaggioVolo(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false)))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }
+                    }catch (Exception exception){
+                        mostraMessaggioErrore();
                     }
                 });
             } else if (r3.isSelected()) {
@@ -161,16 +169,20 @@ public class HelloController {
 
                 b2.setOnMouseClicked( e2 -> {
                     rootBase.getChildren().clear();
-                    if (r10.isSelected()){
-                        if(agenziaViaggi.inserisci(new ViaggioPasti(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true)))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
-                    }else{
-                        if(agenziaViaggi.inserisci(new ViaggioPasti(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false)))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
+                    try{
+                        if (r10.isSelected()){
+                            if(agenziaViaggi.inserisci(new ViaggioPasti(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true)))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }else{
+                            if(agenziaViaggi.inserisci(new ViaggioPasti(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false)))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }
+                    }catch (Exception exception){
+                        mostraMessaggioErrore();
                     }
                 });
             }else{
@@ -198,16 +210,20 @@ public class HelloController {
 
                 b2.setOnMouseClicked( e2 -> {
                     rootBase.getChildren().clear();
-                    if (r10.isSelected()){
-                        if(agenziaViaggi.inserisci(new ViaggioEscursioni(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true,Integer.parseInt(t4.getText()))))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
-                    }else{
-                        if(agenziaViaggi.inserisci(new ViaggioEscursioni(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false,Integer.parseInt(t4.getText()))))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
+                    try{
+                        if (r10.isSelected()){
+                            if(agenziaViaggi.inserisci(new ViaggioEscursioni(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),true,Integer.parseInt(t4.getText()))))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }else{
+                            if(agenziaViaggi.inserisci(new ViaggioEscursioni(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()),false,Integer.parseInt(t4.getText()))))
+                                mostraMessaggioConferma();
+                            else
+                                mostraMessaggioErrore();
+                        }
+                    }catch (Exception exception){
+                        mostraMessaggioErrore();
                     }
                 });
             }
