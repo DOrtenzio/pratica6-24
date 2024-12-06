@@ -16,7 +16,7 @@
          </children></AnchorPane>
       <AnchorPane layoutX="16.0" layoutY="118.0" prefHeight="414.0" prefWidth="249.0" style="-fx-background-color: #DECCCC; -fx-background-radius: 32;">
          <children>
-            <Button fx:id="b1" layoutX="19.0" layoutY="25.0" mnemonicParsing="false" onAction="#aggiungi" onMouseMoved="#cambiaColore" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Aggiungi" textFill="WHITE">
+            <Button fx:id="b1" layoutX="19.0" layoutY="25.0" mnemonicParsing="false" onAction="#aggiungi" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Aggiungi" textFill="WHITE">
                <font>
                   <Font name="Consolas" size="14.0" />
                </font>

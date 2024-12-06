@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pratica824.HellocontrollerFirst">
+   <children>
+       <ImageView fitHeight="485.0" fitWidth="487.0" layoutX="110.0" layoutY="72.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@img/logoIn.jpg" />
+           </image>
+       </ImageView>
+       <AnchorPane layoutX="15.0" layoutY="390.0" prefHeight="83.0" prefWidth="720.0" style="-fx-background-color: #95758A; -fx-background-radius: 24;">
+           <children>
+               <Label alignment="CENTER" layoutX="28.0" layoutY="14.0" prefHeight="60.0" prefWidth="666.0" text="AGENZIA VIAGGI PAOLINO IL MAGO DELLO SPIEDINO" textFill="#f2ebeb">
+                   <font>
+                       <Font name="Consolas" size="24.0" />
+                   </font>
+               </Label>
+           </children></AnchorPane>
+       <Button fx:id="b10" layoutX="237.0" layoutY="320.0" mnemonicParsing="false" onAction="#switchToHelloView" prefHeight="52.0" prefWidth="211.0" style="-fx-background-color: #AF97A7; -fx-background-radius: 24;" text="Inizia" textFill="WHITE">
+           <font>
+               <Font name="Consolas" size="14.0" />
+           </font>
+       </Button>
+   </children>
+</AnchorPane>

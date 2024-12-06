@@ -284,8 +284,4 @@ public class HelloController {
         pausa.play();
     }
 
-    @FXML
-    public void cambiaColore( ){
-
-    }
 }
