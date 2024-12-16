@@ -55,20 +55,15 @@ public class HelloController {
         b1.setDisable(true);
 
         ToggleGroup tipoPacchetto=new ToggleGroup();
-        RadioButton r1=new RadioButton("Base");
         RadioButton r2=new RadioButton("Con Volo");
         RadioButton r3=new RadioButton("Con pasti");
         RadioButton r4=new RadioButton("Con pasti ed escursioni");
-        r1.setToggleGroup(tipoPacchetto);
-        r1.setOnMouseClicked( e -> {
-            b1.setDisable(false);
-        });
         r2.setToggleGroup(tipoPacchetto);
         r2.setOnMouseClicked( e -> {
             b1.setDisable(false);
         });
         HBox h1=new HBox();
-        h1.getChildren().addAll(r1,r2);
+        h1.getChildren().addAll(r2);
         h1.setSpacing(10);
         r3.setToggleGroup(tipoPacchetto);
         r3.setOnMouseClicked( e -> {
@@ -98,20 +93,7 @@ public class HelloController {
             t3.setPromptText("1700.00 €");
             Button b2=new Button("Inserisci");
 
-            if (r1.isSelected()){
-                rootBase.getChildren().addAll(l1,t1,l2,t2,l3,t3,b2);
-                b2.setOnMouseClicked( e1 -> {
-                    rootBase.getChildren().clear();
-                    try{
-                        if(agenziaViaggi.inserisci(new Viaggio(t1.getText(),Integer.parseInt(t2.getText()),Double.parseDouble(t3.getText()))))
-                            mostraMessaggioConferma();
-                        else
-                            mostraMessaggioErrore();
-                    }catch (Exception exception){
-                        mostraMessaggioErrore();
-                    }
-                });
-            } else if (r2.isSelected()) {
+            if (r2.isSelected()) {
                 b2.setDisable(true);
                 ToggleGroup tipoVolo=new ToggleGroup();
                 RadioButton r10=new RadioButton("Andata e ritorno");

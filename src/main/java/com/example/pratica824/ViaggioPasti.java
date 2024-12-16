@@ -43,8 +43,8 @@ public class ViaggioPasti extends Viaggio{
     @Override
     public double getCosto(){
         if (!isPensioneCompleta())
-            return super.getCosto()+(super.getDurataGiorni()*25);
+            return super.getCostoBase()+(super.getDurataGiorni()*25);
         else
-            return super.getCosto()+(super.getDurataGiorni()*35);
+            return super.getCostoBase()+(super.getDurataGiorni()*35);
     }
 }

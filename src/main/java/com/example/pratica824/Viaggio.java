@@ -1,6 +1,6 @@
 package com.example.pratica824;
 
-public class Viaggio {
+public abstract class Viaggio {
     private String destinazione;
     private int durataGiorni;
     private double costoBase;
@@ -49,7 +49,5 @@ public class Viaggio {
     }
 
     //Costo
-    public double getCosto(){
-        return getCostoBase();
-    }
+    public abstract double getCosto();
 }

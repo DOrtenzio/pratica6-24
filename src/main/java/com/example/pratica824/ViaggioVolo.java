@@ -42,8 +42,8 @@ public class ViaggioVolo extends Viaggio{
     @Override
     public double getCosto(){
         if (!isAndataRitorno())
-            return super.getCosto()*1.5;
+            return super.getCostoBase()*1.5;
         else
-            return super.getCosto()*1.85;
+            return super.getCostoBase()*1.85;
     }
 }
