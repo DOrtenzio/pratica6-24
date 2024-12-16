@@ -2,6 +2,7 @@ package com.example.pratica824;
 
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
@@ -9,7 +10,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
-public class HelloController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class HelloController implements Initializable {
     @FXML
     private VBox rootBase;
     @FXML
@@ -20,7 +24,7 @@ public class HelloController {
     private AgenziaViaggi agenziaViaggi=new AgenziaViaggi();
 
     @FXML
-    public void initialize() {
+    public void initialize(URL location, ResourceBundle resources) {
         b1.setOnMouseMoved(event -> {
             b1.setStyle("-fx-background-color: #95758A; -fx-background-radius: 36;");
         });
@@ -265,5 +269,4 @@ public class HelloController {
         pausa.setOnFinished(event -> root.getChildren().remove(messaggioConferma));
         pausa.play();
     }
-
 }

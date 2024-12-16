@@ -23,11 +23,6 @@ public class HellocontrollerFirst {
     }
     @FXML
     private void switchToHelloView(ActionEvent event) throws IOException {
-        try {
-            TimeUnit.SECONDS.sleep(4);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 750, 550);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
